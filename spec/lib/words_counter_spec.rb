@@ -35,11 +35,5 @@ RSpec.describe WordsCounter do
         'shady' => 1,
       )
     end
-
-    it 'foos' do
-      path = File.join(File.dirname(__FILE__), 'bla.txt')
-      text = File.read(path)
-      puts text
-    end
   end
 end
