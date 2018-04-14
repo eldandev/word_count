@@ -14,7 +14,7 @@ require "action_view/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-#require 'sidekiq'
+
 require 'sucker_punch'
 require 'net/http'
 require 'uri'
@@ -26,6 +26,5 @@ Bundler.require(*Rails.groups)
 
 module WordCount
   class Application < Rails::Application
-    config.active_job.queue_adapter = :sidekiq
   end
 end
