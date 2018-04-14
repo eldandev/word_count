@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "ce9c8d3f-b532-461b-8768-e4fd2cc904e7",
+		"name": "words_count",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "store words - file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"content\": \"/usr/src/app/Dockerfile\",\n\t\"type\": \"file\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/api/store_words",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"store_words"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store words - url",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"content\": \"https://github.com/stevegraham/certified\",\n\t\"type\": \"url\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/api/store_words",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"store_words"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store words - text",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"content\": \"Hi! My name is (what?), my name is (who?), my name is Slim Shady\",\n\t\"type\": \"text\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:{{port}}/api/store_words",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"store_words"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lookup word",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:{{port}}/api/lookup_word?word=workdir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"lookup_word"
+					],
+					"query": [
+						{
+							"key": "word",
+							"value": "workdir"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
